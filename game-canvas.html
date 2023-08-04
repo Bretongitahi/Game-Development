@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dev Canvas Tutorial</title>
+    <style>
+        *{
+            padding: 0;
+            margin:  0;
+        }
+        canvas{
+            background: #eee;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="Mycanvas" width="400" height="600"></canvas>
+    <script>
+        var canvas = document.getElementById("Mycanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.rect(120, 220, 120, 220);
+        ctx.fillStyle = "#feefff";
+        ctx.fill();
+        ctx.closePath();
+        
+        //Creating a circle
+        ctx.beginPath();
+        ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.closePath();
+
+        //Creating our second circle
+        ctx.beginPath();
+        ctx.arc(140, 100, 60, 0, Math.PI*2, false);
+        ctx.fillStyle="black";
+        ctx.fill();
+        ctx.closePath();
+
+        //Creating our third circle without a fill
+        ctx.beginPath();
+        ctx.arc(340, 160, 50, 0, Math.PI*2, false);
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+        ctx.closePath();
+
+        //Creating a rectangle without a fill
+        ctx.beginPath();
+        ctx.rect(250, 210, 120, 120);
+        ctx.strokeStyle = "violet";
+        ctx.stroke();
+        ctx.closePath();
+        
+        //Creating a second rectangle with a fill
+        ctx.beginPath();
+        ctx.rect(50, 400, 60, 100);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.closePath();
+        
+        //Creating a third rectangle without a fill
+        ctx.beginPath();
+        ctx.rect(20, 100, 30, 50);
+        ctx.strokeStyle = "violet";
+        ctx.stroke();
+        ctx.closePath();
+        </script>
+</body>
+</html>
